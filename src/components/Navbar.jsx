@@ -7,29 +7,45 @@ const Container = styled.div`
 `
 const Section = styled.div`
   width: 1400px;
-  background-color: rebeccapurple;
+  display: flex;
+  /* background-color: rebeccapurple; */
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
 `
 const Links = styled.div`
-  
+  display: flex;
+  align-items: center;
+  gap: 50px;
 `
-const Logo = styled.div`
-  
+const Logo = styled.img`
+  height: 50px;
 `
-const List = styled.div`
-  
+const List = styled.ul`
+  display: flex;
+  gap: 20px;
+  list-style: none;
 `
-const ListItem = styled.div`
-  
+const ListItem = styled.li`
+  cursor: pointer;
 `
 const Icons = styled.div`
-  
+  display: flex;
+  align-items: center;
+  gap: 20px;
 `
-const Icon = styled.div`
-  
+const Icon = styled.img`
+  width: 20px;
+  cursor: pointer;
 `
-const Button = styled.div`
-  
+const Button = styled.button`
+  width: 100px;
+  padding: 10px;
+  background-color: #da4ea2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 `
 const Navbar = () => {
   return (
@@ -45,9 +61,9 @@ const Navbar = () => {
 			</List>
 		</Links>
 		<Icons>
-			<Icon src="" />
-		</Icons>
+			<Icon src="../../public/imgs/search.png" />
 		<Button>Hire Now</Button>
+		</Icons>
 	</Section>
     </Container>
   )
