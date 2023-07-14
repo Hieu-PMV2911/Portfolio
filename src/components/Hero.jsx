@@ -52,8 +52,8 @@ const Button = styled.button`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
-  width: 100px;
-  padding: 10px;
+  width: 200px;
+  padding: 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -84,8 +84,8 @@ const Hero = () => {
         <Left>
           <Title>Think. Make. Solve.</Title>
           <WhatWeDo>
-            <Line src=""/>
-            <Subtitle> -- What We Do</Subtitle>
+            <Line src="../../public/imgs/line.png"/>
+            <Subtitle> What We Do</Subtitle>
           </WhatWeDo>
           <Des>Hope we will creating delightful, Looking forward to a long-term cooperation with you.</Des>
           <Button>Learn More</Button>
