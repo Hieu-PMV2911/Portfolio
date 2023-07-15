@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import WebDesign from './WebDesign'
+import Development from './Development'
+import SocialMedia from './SocialMedia'
 
 const data = [
-  "Web designer",
+  "Web Designer",
   "Development",
   "Social Media"
 ]
@@ -77,17 +80,25 @@ const ListItem = styled.li`
   }
 `;
 const Work = () => {
+  const [work, setWork] = useState("Web Designer");
   return (
     <Container>
       <Section>
         <Left>
           <List>
             {data.map((e)=>(
-              <ListItem key={e} text={e}>{e}</ListItem>
+              <ListItem key={e} text={e} onClick={() => setWork(e)}>{e}</ListItem>
             ))}
           </List>
         </Left>
         <Right>
+          {work === "Web Designer" ? (
+              <WebDesign />
+            ) : work === "Development" ? (
+              <Development />
+            ) : (
+              <SocialMedia />
+            )}
         </Right>
       </Section>
     </Container>

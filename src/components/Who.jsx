@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { OrbitControls} from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import Cube from './Cube'
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -61,7 +63,12 @@ const Who = () => {
     <Container>
       <Section>
         <Left>
-          
+          <Canvas camera={{fov: "25", position: [8,8,8] }}>
+            <OrbitControls enableZoom={false} autoRotate />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3,2,1]}/>
+            <Cube />
+          </Canvas>
         </Left>
         <Right>
           <Title>Think outside the square space</Title>

@@ -65,10 +65,8 @@ const Contact = () => {
   
     emailjs.sendForm("service_bj29o5r", "template_c8atwk9", form.current, "GSd1O2136uucRzw48")
         .then((result) => {
-            console.log(result.text);
             setSuccess(true);
         }, (error) => {
-            console.log(error.text);
             setSuccess(false);
     });
   }
