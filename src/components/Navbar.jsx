@@ -4,6 +4,17 @@ import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  /* z-index: 999;
+  position: fixed;
+  top: 0; */
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 768px){
+    width: 100%;
+  }
 `
 const Section = styled.div`
   width: 1400px;
@@ -12,11 +23,22 @@ const Section = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
+    padding: 10px;
+  }
+
+  @media only screen and (max-width: 768px){
+    width: 100%;
+    padding: 10px;
+  }
 `
 const Links = styled.div`
   display: flex;
   align-items: center;
   gap: 50px;
+
 `
 const Logo = styled.img`
   height: 50px;
@@ -25,6 +47,10 @@ const List = styled.ul`
   display: flex;
   gap: 20px;
   list-style: none;
+
+  @media only screen and (max-width: 768px){
+    display: none;
+  }
 `
 const ListItem = styled.li`
   cursor: pointer;
@@ -47,24 +73,39 @@ const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
 `
+const Link = styled.a`
+  text-decoration: none;
+  color: white;
+  list-style: none;
+`
 const Navbar = () => {
   return (
     <Container>
-	<Section>
-		<Links>
-			<Logo src="../../public/imgs/logo.png" />
-			<List>
-				<ListItem>HOME</ListItem>
-				<ListItem>PROJECT</ListItem>
-				<ListItem>WORKS</ListItem>
-				<ListItem>CONTACT</ListItem>
-			</List>
-		</Links>
-		<Icons>
-			<Icon src="../../public/imgs/search.png" />
-		<Button>Hire Now</Button>
-		</Icons>
-	</Section>
+      <Section>
+        <Links>
+          <Logo src="../../public/imgs/logo.png" />
+          <List>
+            <ListItem>
+              <Link href='#home'>HOME</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="#project">PROJECT</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="#works">WORKS</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="#contact">CONTACT</Link>
+            </ListItem>
+          </List>
+        </Links>
+        <Icons>
+          <Icon src="../../public/imgs/search.png" />
+        <Button>
+          <Link href="#contact">Hire Now</Link>
+        </Button>
+        </Icons>
+      </Section>
     </Container>
   )
 }

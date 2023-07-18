@@ -19,6 +19,10 @@ const Container = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 300;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 100%; 
+  }
 `
 
 const Section = styled.div`
@@ -26,6 +30,16 @@ const Section = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `
 
 const Left = styled.div`
@@ -33,6 +47,15 @@ const Left = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    flex: 1;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    justify-content: center;
+  }
 `
 const Right = styled.div`
   flex: 1;
@@ -40,6 +63,11 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    flex: 1;
+    width: 50%;
+  }
 `
 
 const List = styled.ul`
@@ -55,6 +83,16 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 70px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
 
   &:after {
     content: "${(props) => props.text}";
@@ -83,7 +121,7 @@ const Work = () => {
   const [work, setWork] = useState("Web Designer");
   return (
     <Container>
-      <Section>
+      <Section id="works">
         <Left>
           <List>
             {data.map((e)=>(

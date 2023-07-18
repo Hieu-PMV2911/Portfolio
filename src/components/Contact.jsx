@@ -6,7 +6,10 @@ import emailjs from '@emailjs/browser';
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
+  }
 `
 const Section = styled.div`
   height: 100vh;
@@ -15,15 +18,37 @@ const Section = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+  }
 `
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    flex: 1;
+    /* width: 100%; */
+  }
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `
 const Right = styled.div`
   flex: 1;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    flex: 1;
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 const Title = styled.h1`
   font-weight: 200;
@@ -33,6 +58,14 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+  }
 `
 const Input = styled.input`
   padding: 20px;
@@ -73,7 +106,7 @@ const Contact = () => {
 
   return (
     <Container>
-      <Section>
+      <Section id="contact">
         <Left>
           <Form ref={form} onSubmit={handleClick}>
             <Title>Contact Us</Title>
