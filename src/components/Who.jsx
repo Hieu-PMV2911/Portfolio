@@ -24,7 +24,7 @@ const Container = styled.div`
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: center;
 
@@ -162,7 +162,7 @@ const Who = () => {
         <Right>
           <Title>Think outside the square space</Title>
           <WhatWeDo>
-            <Line src="../../public/imgs/line.png"/>
+            <Line src="./imgs/line.png"/>
             <Subtitle> What I Do</Subtitle>
           </WhatWeDo>
           <Des>A creative group of designers and developers with a passion for the arts.</Des>

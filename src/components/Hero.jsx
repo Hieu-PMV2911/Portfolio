@@ -7,6 +7,8 @@ const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
+  /* width: 100%; */
+  margin-left: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +26,7 @@ const Container = styled.div`
 const Section = styled.div`
   height: 100%;
   scroll-snap-align: center;
-  width: 1400px;
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
 
@@ -43,11 +45,12 @@ const Section = styled.div`
 `
 
 const Left = styled.div`
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  width: 80%;
 
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     flex: 1;
@@ -144,7 +147,7 @@ const Button = styled.button`
 `
 
 const Right = styled.div`
-  flex: 3;
+  flex: 1;
   position: relative;
 
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -159,7 +162,7 @@ const Right = styled.div`
 `
 
 const Img = styled.img`
-  width: 800px;
+  width: 100%;
   height: 600px;
   object-fit: contain;
   position: absolute;
@@ -197,7 +200,7 @@ const Hero = () => {
             Think. Make. Solve.
           </Title>
           <WhatWeDo>
-            <Line src="../../public/imgs/line.png"/>
+            <Line src="./imgs/line.png"/>
             <Subtitle> What I Do</Subtitle>
           </WhatWeDo>
           <Des>Hope we will creating delightful, Looking forward to a long-term cooperation with you.</Des>
@@ -212,7 +215,7 @@ const Hero = () => {
               <MeshDistortMaterial color="#2d044c" attach="material" distort={0.5} speed={1.5} />
             </Sphere>
           </Canvas>
-          <Img src="../../public/imgs/anhdaidien.png" />
+          <Img src="./imgs/anhdaidien.png" />
         </Right>
       </Section>
     </Container>

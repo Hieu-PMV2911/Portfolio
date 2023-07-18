@@ -4,6 +4,8 @@ import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
+  /* margin-right: 20px; */
   /* z-index: 999;
   position: fixed;
   top: 0; */
@@ -83,7 +85,7 @@ const Navbar = () => {
     <Container>
       <Section>
         <Links>
-          <Logo src="../../public/imgs/logo.png" />
+          <Logo src="./imgs/logo.png" />
           <List>
             <ListItem>
               <Link href='#home'>HOME</Link>
