@@ -12,7 +12,7 @@ const Container = styled.div`
   overflow-y: auto;
   color: white;
   scrollbar-width: none;
-  background: url("../public/imgs/bg.jpeg");
+  background: url("./imgs/bg.jpeg");
   &::-webkit-scrollbar{
     display:none;
   }
