@@ -62,6 +62,20 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-size: 74px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide 5s linear infinite;
+  background-size: 200% auto;
+
+  @keyframes slide {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
 
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     text-align: center;
@@ -111,8 +125,8 @@ const Button = styled.button`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
-  width: 100px;
-  padding: 10px;
+  width: 200px;
+  padding: 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
